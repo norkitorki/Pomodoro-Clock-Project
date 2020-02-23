@@ -31,6 +31,9 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background: #0D0D0D;
+	color: #FFFFFF;
+	font: italic bolder 1em Georgia, serif;
 }
 ol, ul {
 	list-style: none;
@@ -50,26 +53,58 @@ table {
 
 /* End of CSS Reset Rules */
 
-body {
-  background: grey;
+h1 {
+  color: #FFFFFF;
+  text-decoration: underline 1px;
+	font-size: 2.5em;
 }
 
-h1 {
-  color: whitesmoke;
-  font-size: 2.5em;
-  text-decoration: underline 1px;
-  margin: 10px auto;
+h3 {
+	color: #FFFFFF;
+	margin-bottom: .5em;
+	font-size: 1.5em;
 }
 
 div#main {
-  width: 25%;
-  height: auto;
+  width: max-content;
   border: 1px solid white;
 	text-align: center;
+	margin: 10em auto;
+	padding: .4em;
 }
 
-div#session {
+div.session {
 	display: inline-block;
-	margin: 10px auto;
+	margin: 0 30px 0 30px;
 	padding: 1em;
+}
+
+div.controls {
+	padding: .3em;
+	font-size: 1.4em;
+}
+
+button {
+	border: none;
+	background: none;
+	font: italic bold 1.5em Georgia, serif;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+button:first-of-type {
+	display: inherit;
+}
+
+button::-moz-focus-inner {
+	border: 0;
+}
+
+div.session button:hover {
+	color: grey;
+}
+
+div#timer button:first-of-type {
+	float: left;
+	margin-left: 10%;
 }
