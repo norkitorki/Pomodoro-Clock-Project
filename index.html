@@ -11,18 +11,18 @@
       <h1>Pomodoro Clock</h1>
 
       <div id="timer-controls">
-        <div class="session">
+        <div class="session-timer">
           <h3>Session</h3>
-          <button>+</button>
-          <div>25:00</div>
-          <button>-</button>
+          <button class="increment-session">+</button>
+          <div class="session-display">00:25:00</div>
+          <button class="decrement-session">-</button>
         </div>
 
-        <div class="session">
+        <div class="break-timer">
           <h3>Break</h3>
-          <button>+</button>
-          <div>05:00</div>
-          <button>-</button>
+          <button class="increment-break">+</button>
+          <div class="break-display">00:05:00</div>
+          <button class="decrement-break">-</button>
         </div>
       </div>
 
@@ -40,5 +40,6 @@
     </div>
 
     <script src="./script/script.js"></script>
+    <script src="./script/controls.js"></script>
   </body>
 </html>

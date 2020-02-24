@@ -73,7 +73,7 @@ div#main {
 	padding: .4em;
 }
 
-div.session {
+div.session-timer, div.break-timer {
 	display: inline-block;
 	margin: 0 30px 0 30px;
 	padding: 1em;
@@ -100,7 +100,7 @@ button::-moz-focus-inner {
 	border: 0;
 }
 
-div.session button:hover {
+div.session-timer button:hover {
 	color: grey;
 }
 
