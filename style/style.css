@@ -31,9 +31,13 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	background: #0D0D0D;
+	height: 100%;
+	background: #000000;
+	background: linear-gradient(to left top, #000000, #29011a, #42003a, #4a0069, #180ba6);
+	background-repeat: no-repeat;
 	color: #FFFFFF;
 	font: italic bolder 1em Georgia, serif;
+
 }
 ol, ul {
 	list-style: none;
@@ -54,57 +58,126 @@ table {
 /* End of CSS Reset Rules */
 
 h1 {
-  color: #FFFFFF;
-  text-decoration: underline 1px;
-	font-size: 2.5em;
+	font-size: 3em;
+	text-decoration: underline;
+}
+
+.progress-bar {
+
+	width: 0%;
+	height: 1.2%;
+	background-color: #215A0D;
+	border-radius: 0 5px 5px 0;
+	border-color: transparent;
+	box-shadow: .1em .1em .1em 0 rgba(0, 0, 0, 0.6);
+	transition: background-color 1.2s;
+}
+
+#main {
+	background: #040A14;
+	border: 4px double #FFFFFF;
+  max-width: max-content;
+	text-align: center;
+	margin: 10em auto;
+	padding: 1em;
+}
+
+#timer-controls {
+	margin: 1.2em auto;
 }
 
 h3 {
-	color: #FFFFFF;
-	margin-bottom: .5em;
-	font-size: 1.5em;
-}
-
-div#main {
-  width: max-content;
-  border: 1px solid white;
-	text-align: center;
-	margin: 10em auto;
-	padding: .4em;
+	margin: 0 0 .5em 0;
+	font-size: 2em;
 }
 
 div.session-timer, div.break-timer {
 	display: inline-block;
-	margin: 0 30px 0 30px;
-	padding: 1em;
+	margin: 0 1.5em 0 1.5em;
+	font-size: 1.1em;
 }
 
-div.controls {
-	padding: .3em;
-	font-size: 1.4em;
+.session-display, .break-display {
+	display: inline-block;
+	padding: .6em;
+	border: 2px solid transparent;
+	border-radius: .6em;
+	background-color: rgba(0, 0, 0, .4);
+	transition: border-color 1.2s;
 }
 
 button {
+	background: transparent;
 	border: none;
-	background: none;
-	font: italic bold 1.5em Georgia, serif;
+	border-radius: 100%;
+	font: normal bold 1.5em Georgia, serif;
 	color: #FFFFFF;
 	cursor: pointer;
+	padding: .6em;
 }
 
-button:first-of-type {
-	display: inherit;
+#timer button {
+	margin: 0 .5em;
 }
 
 button::-moz-focus-inner {
 	border: 0;
 }
 
-div.session-timer button:hover {
+button:hover:not(.fa-pause) {
 	color: grey;
 }
 
-div#timer button:first-of-type {
-	float: left;
-	margin-left: 10%;
+button.fa-play:hover {
+	color: #215A0D;
+}
+
+#timer {
+	text-align: center;
+	width: max-content;
+	margin: 0 auto;
+}
+
+.fa-pause {
+	color: #530A0A;
+}
+
+.break-active-bar {
+	background-color: #530A0A;
+}
+
+.running {
+	border-color: #215A0D;
+}
+
+.paused {
+	border-color: #530A0A;
+}
+
+.status-yellow {
+	border-color: #eeff00;
+}
+
+.status-red {
+	border-color: #ff5926;
+}
+
+.progress-paused {
+	background-color: #530A0A;
+}
+
+.progress-yellow {
+	background-color: #eeff00;
+}
+
+.progress-red {
+	background-color: #ff5926;
+}
+
+hr {
+	margin: 1em auto;
+}
+
+#timer-controls button.hidden {
+	display: none;
 }

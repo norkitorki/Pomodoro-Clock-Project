@@ -3,43 +3,42 @@
     <meta charset="UTF-8">
     <title>Pomodoro Clock</title>
     <link href="./style/style.css" type="text/css" rel="stylesheet"></link>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   </head>
 
   <body>
+    <div class="progress-bar"></div>
 
     <div id="main">
       <h1>Pomodoro Clock</h1>
 
       <div id="timer-controls">
         <div class="session-timer">
-          <h3>Session</h3>
-          <button class="increment-session">+</button>
-          <div class="session-display">00:25:00</div>
-          <button class="decrement-session">-</button>
+          <h3 class="session">Session</h3>
+          <button class="session-down fa fa-arrow-down"></button>
+          <div class="session-display">25:00</div>
+          <button class="session-up fa fa-arrow-up"></button>
         </div>
 
         <div class="break-timer">
-          <h3>Break</h3>
-          <button class="increment-break">+</button>
-          <div class="break-display">00:05:00</div>
-          <button class="decrement-break">-</button>
+          <h3 class="break">Break</h3>
+          <button class="break-down fa fa-arrow-down"></button>
+          <div class="break-display">05:00</div>
+          <button class="break-up fa fa-arrow-up"></button>
         </div>
       </div>
 
-      <hr color="#FFFFFF" width="80%">
+      <hr color="#FFFFFF" width="95%">
 
       <div id="timer">
-        <button>Start</button>
-        <button>Reset</button>
-        <h3>Timer</h3>
-        <div>00:25:00</div>
-        <button>Pause</button>
-        <button>Stop</button>
+        <button class="fa fa-play fa-2x"></button>
+        <button class="fa fa-stop fa-2x"></button>
+        <button class="fa fa-undo fa-2x"></button>
 
       </div>
     </div>
 
-    <script src="./script/script.js"></script>
     <script src="./script/controls.js"></script>
+    <script src="./script/timer.js"></script>
   </body>
 </html>
