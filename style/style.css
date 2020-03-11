@@ -63,7 +63,6 @@ h1 {
 }
 
 .progress-bar {
-
 	width: 0%;
 	height: 1.2%;
 	background-color: #215A0D;
@@ -150,7 +149,7 @@ button.fa-play:hover {
 	border-color: #215A0D;
 }
 
-.paused {
+div.paused {
 	border-color: #530A0A;
 }
 
@@ -164,14 +163,6 @@ button.fa-play:hover {
 
 .progress-paused {
 	background-color: #530A0A;
-}
-
-.progress-yellow {
-	background-color: #eeff00;
-}
-
-.progress-red {
-	background-color: #ff5926;
 }
 
 hr {
