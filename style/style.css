@@ -32,6 +32,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	height: 100%;
+	padding: 5%;
 	background: #000000;
 	background: linear-gradient(to left top, #000000, #29011a, #42003a, #4a0069, #180ba6);
 	background-repeat: no-repeat;
@@ -58,36 +59,31 @@ table {
 /* End of CSS Reset Rules */
 
 h1 {
-	font-size: 3em;
+	font-size: 4.5em;
 	text-decoration: underline;
-}
-
-.progress-bar {
-	width: 0%;
-	height: 1.2%;
-	background-color: #215A0D;
-	border-radius: 0 5px 5px 0;
-	border-color: transparent;
-	box-shadow: .1em .1em .1em 0 rgba(0, 0, 0, 0.6);
-	transition: background-color 1.2s;
+	border: 2px 2px 0 0 solid #FFFFFF;
+	margin-bottom: 20px;
+	text-align: center;
 }
 
 #main {
 	background: #040A14;
 	border: 4px double #FFFFFF;
+	border-radius: 4px;
   max-width: max-content;
+	min-width: 620px;
 	text-align: center;
-	margin: 10em auto;
-	padding: 1em;
+	margin: 0 auto;
+	padding: 20px;
 }
 
 #timer-controls {
-	margin: 1.2em auto;
+	margin: 0 auto;
 }
 
 h3 {
-	margin: 0 0 .5em 0;
-	font-size: 2em;
+	margin: 0 0 10px 0;
+	font-size: 3.5em;
 }
 
 div.session-timer, div.break-timer {
@@ -102,7 +98,8 @@ div.session-timer, div.break-timer {
 	border: 2px solid transparent;
 	border-radius: .6em;
 	background-color: rgba(0, 0, 0, .4);
-	transition: border-color 1.2s;
+	transition: border-color 1.2s, padding .8s;
+	font-size: 2em;
 }
 
 button {
@@ -116,19 +113,27 @@ button {
 }
 
 #timer button {
-	margin: 0 .5em;
+	margin: 0 15px;
 }
 
 button::-moz-focus-inner {
 	border: 0;
 }
 
-button:hover:not(.fa-pause) {
+button:focus {
+	outline: 0;
+}
+
+button:hover {
 	color: grey;
 }
 
 button.fa-play:hover {
 	color: #215A0D;
+}
+
+button.fa-pause:hover {
+	color: #530A0A;
 }
 
 #timer {
@@ -137,12 +142,8 @@ button.fa-play:hover {
 	margin: 0 auto;
 }
 
-.fa-pause {
-	color: #530A0A;
-}
-
-.break-active-bar {
-	background-color: #530A0A;
+hr {
+	margin-top: 22px;
 }
 
 .running {
@@ -157,18 +158,10 @@ div.paused {
 	border-color: #eeff00;
 }
 
-.status-red {
+.status-orange {
 	border-color: #ff5926;
 }
 
-.progress-paused {
-	background-color: #530A0A;
-}
-
-hr {
-	margin: 1em auto;
-}
-
 #timer-controls button.hidden {
-	display: none;
+	visibility: hidden;
 }

@@ -10,21 +10,26 @@ const breakDisplay   = document.querySelector("div.break-display");
 
 // Session/Break Timer functionality
 
-let sessionDuration = new Date("2000 00:00:35");
-let sessionReset    = new Date("2000 00:00:00");
-let breakDuration   = new Date("2000 00:00:32");
-let breakReset      = new Date("2000 00:00:00");
+let sessionDuration = new Date("Dec 31 1999 00:25:00");
+let sessionReset    = new Date("Dec 31 1999 00:00:00");
+let breakDuration   = new Date("Dec 31 1999 00:05:00");
+let breakReset      = new Date("Dec 31 1999 00:00:00");
 
 
-function formatTimer(display, date) {
-  if (date.getHours() < 1) {
+const formatTimer = function(display, date) {
+  if (date.getHours() < 1 && date.getTime() < 946681200000) {
     display.textContent = date.toString().match(/\d\d:(\d\d:\d\d)/)[1];
-  } else {
+  }
+  else {
     display.textContent = date.toString().match(/\d\d:\d\d:\d\d/)[0];
+  }
+  if (date.getTime() >= 946681200000) {
+    let day = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate();
+    display.textContent = `${day}:${display.textContent}`;
   }
 };
 
-function lockControls() {
+const lockControls = function() {
   if (timerActive) {
     controls.querySelectorAll("button").forEach( button => button.classList.add("hidden"));
   } else {
@@ -40,13 +45,13 @@ controls.addEventListener("click", (e) => {
     if (e.target.classList.contains("session-up")) {
       sessionDuration.setMinutes(sessionMinutes += 1);
     }
-    else if (e.target.classList.contains("session-down") && (sessionMinutes > 1 || sessionDuration.getHours() > 0)) {
+    else if (e.target.classList.contains("session-down") && sessionDuration.getTime() > 946594900000) {
       sessionDuration.setMinutes(sessionMinutes -= 1);
     }
     else if (e.target.classList.contains("break-up")) {
       breakDuration.setMinutes(breakMinutes += 1);
     }
-    else if (e.target.classList.contains("break-down") && (breakMinutes > 1 || breakDuration.getHours() > 0 )) {
+    else if (e.target.classList.contains("break-down") && breakDuration.getTime() > 946594900000) {
       breakDuration.setMinutes(breakMinutes -= 1);
     }
 
